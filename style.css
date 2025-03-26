@@ -1,0 +1,103 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(248, 235, 219);
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    
+}
+*{
+    margin: 0;
+}
+.app-section{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    width: 400px;
+    gap: 50px;
+    padding: 20px;
+    background-color: rgb(231, 245, 232);
+    border-radius: 15px;
+    transition: box-shadow 0.1s ease;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.app-section:hover{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+    
+}
+.win{
+    background-color: rgb(6, 214, 20);
+}
+.lose{
+    background-color: rgb(214, 6, 6);
+}
+#theNumber{
+    font-size: 7rem;
+}
+.button-div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+button{
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    transition: font-size 0.1s ease;
+}
+button:hover{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+    font-size: 0.9rem;
+}
+input{
+    border: 0;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    text-align: center  ;
+    width: 250px;
+    height: 30px;
+}
+input:hover{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+ 
+}
+h6{
+    margin: 0;
+}
+h5{
+    margin: 0;
+}
+ul{
+    list-style: none;
+    background-color: azure;
+    border-radius: 5px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    padding: 0px;
+    margin-top: 25px;
+}
+.p{
+    padding: 5px;
+}
+ul:hover{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 1.5);
+}
+li{
+    margin-top: 5px;
+    background-color: rgb(75, 160, 71);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 2);
+}
