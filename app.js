@@ -44,7 +44,7 @@ function valueControl(GuessValue, theNumberValue) {
 function didYouWinControl(theNumberValue, GuessValue) {
     const value = Number(theNumberValue);
     const guess = Number(GuessValue);
-    const situtationControl = value - guess;
+    const situtationControl = Math.abs(value - guess);
     if (value === guess) {
         winColor();
         const situtationText = "(Kazandın!)"
