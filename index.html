@@ -10,6 +10,7 @@
 
 <body>
     <div class="container">
+
         <div class="app-section">
 
             <div id="theNumber">
@@ -25,9 +26,16 @@
 
             <div class="button-div">
 
-                <input type="number" id="GuessValue" placeholder="1 ile 10 arasında sayı giriniz (1,10 dahil)">
+                <input type="number" id="GuessValue" placeholder="1 ile 5 arasında sayı giriniz (1,5 dahil)">
                 <div style="display: flex; flex-direction: row; gap: 10px;"><button id="confirm">Confirm</button>
                     <button id="clear">Clear</button>
+
+                </div>
+                <div class="lvlbuttons">
+                    <button id="level1" class="lvlbutton" style="background-color: rgb(163, 146, 146);">Level
+                        1</button>
+                    <button id="level2" class="lvlbutton" style="background-color: rgb(160, 53, 53);"> Level 2</button>
+                    <button id="level3" class="lvlbutton" style="background-color: rgb(202, 2, 2);"> Level 3</button>
                 </div>
             </div>
         </div>
@@ -36,6 +44,7 @@
             </ul>
         </div>
     </div>
+
     <script src="./app.js"></script>
 </body>
 
