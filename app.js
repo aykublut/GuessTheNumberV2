@@ -6,13 +6,17 @@ const situtation = document.querySelector("h6");
 const ul = document.querySelector("ul");
 const appSection = document.querySelector(".app-section");
 const clear = document.querySelector("#clear");
+const levelbtns = document.querySelector(".lvlbuttons");
+
+let level = 1;
 
 runEvents();
 function runEvents() {
     confirmButton.addEventListener("click", exe);
-    clear.addEventListener("click", clearul)
+    clear.addEventListener("click", clearul);
+    levelbtns.addEventListener("click", selectLevel);
 }
-console.log(ul.children);
+
 
 function clearul() {
     const lists = Array.from(ul.children);
@@ -22,12 +26,30 @@ function clearul() {
     ulPaddingProblem();
 }
 function exe() {
-    const theNumberValue = Math.floor(Math.random() * 10 + 1);
-    const GuessValue = GuessValueNumber.value.trim();
-    console.log(GuessValue);
-    valueControl(GuessValue, theNumberValue);
-    didYouWinControl(theNumberValue, GuessValue);
-    ulPaddingProblem();
+    if (level === 1) {
+        const theNumberValue = Math.floor(Math.random() * 5 + 1);
+        const GuessValue = GuessValueNumber.value.trim();
+        console.log(GuessValue);
+        valueControl(GuessValue, theNumberValue);
+        didYouWinControl(theNumberValue, GuessValue);
+        ulPaddingProblem();
+    }
+    if (level === 2) {
+        const theNumberValue = Math.floor(Math.random() * 10 + 1);
+        const GuessValue = GuessValueNumber.value.trim();
+        console.log(GuessValue);
+        valueControl(GuessValue, theNumberValue);
+        didYouWinControl(theNumberValue, GuessValue);
+        ulPaddingProblem();
+    }
+    if (level === 3) {
+        const theNumberValue = Math.floor(Math.random() * 30 + 1);
+        const GuessValue = GuessValueNumber.value.trim();
+        console.log(GuessValue);
+        valueControl(GuessValue, theNumberValue);
+        didYouWinControl(theNumberValue, GuessValue);
+        ulPaddingProblem();
+    }
 }
 
 function valueControl(GuessValue, theNumberValue) {
@@ -113,4 +135,28 @@ function ulPaddingProblem() {
         ul.classList.add("p");
     }
 
+}
+function selectLevel(e) {
+    if (e.target.id === "level1") {
+        level = 1;
+        appSection.style.borderRadius = "30px"
+        appSection.style.border = "none";
+        GuessValueNumber.setAttribute("placeholder", "1 ile 5 arasında sayı giriniz (1,5 dahil)");
+        appSection.style.backgroundColor = "rgb(163, 146, 146)"
+    }
+    else if (e.target.id === "level2") {
+        level = 2;
+        appSection.style.borderRadius = "10px";
+        appSection.style.border = "1px solid brown";
+        GuessValueNumber.setAttribute("placeholder", "1 ile 10 arasında sayı giriniz (1,10 dahil)");
+        appSection.style.backgroundColor = "rgb(160, 53, 53)"
+    }
+    else if (e.target.id === "level3") {
+        level = 3;
+        appSection.style.borderRadius = "3px";
+        appSection.style.border = "3px solid red";
+        GuessValueNumber.setAttribute("placeholder", "1 ile 30 arasında sayı giriniz (1,30 dahil)");
+        appSection.style.backgroundColor = "rgb(202, 2, 2)"
+
+    }
 }
